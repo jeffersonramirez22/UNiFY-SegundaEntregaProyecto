@@ -1,0 +1,567 @@
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #4BA58F;
+    --verde-oscuro: #23866F;
+    --verde-claro: #E5F3EF;
+    --naranja: #FF941F;
+    --texto: #171717;
+    --gris: #DCDCDC;
+    --fondo: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--texto);
+    background-color: #FFFFFF;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ==========================================
+   2. ENCABEZADO Y NAVEGACIÓN
+========================================== */
+
+.encabezado {
+    display: grid;
+    grid-template-columns: minmax(12rem, 1fr) 1.8fr;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    width: 10rem;
+    height: auto;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.navegacion a {
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #111111;
+    text-decoration: none;
+}
+
+.navegacion a:hover {
+    color: var(--verde-oscuro);
+}
+
+.navegacion .boton-cuenta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    min-width: 16.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.7rem;
+
+    background-color: var(--naranja);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.icono-cuenta {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.navegacion .boton-cuenta:hover {
+    background-color: #E67F0B;
+}
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL
+========================================== */
+
+.confirmacion {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: start;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 75rem;
+    min-height: 85vh;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    background-color: #FFFFFF;
+}
+
+/* ==========================================
+   4. INDICADOR DE PROGRESO
+========================================== */
+
+.pasos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.paso {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+    color: var(--verde-oscuro);
+}
+
+.paso span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: #FFFFFF;
+    background-color: var(--verde);
+    font-weight: bold;
+}
+
+.paso p {
+    flex-shrink: 0;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.paso.actual {
+    color: var(--naranja);
+}
+
+.paso.actual span {
+    background-color: var(--naranja);
+}
+
+/* ==========================================
+   5. MENSAJE DE CONFIRMACIÓN
+========================================== */
+
+.mensaje-exito {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.icono-exito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto 0.5rem;
+    border: 4px solid #25AD80;
+    border-radius: 0.5rem;
+    color: #25AD80;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.mensaje-exito h1 {
+    margin: 0.25rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.mensaje-exito p {
+    margin: 0.5rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   6. RESUMEN DE COMPRA
+========================================== */
+
+.resumen {
+    width: 100%;
+    max-width: 33.75rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #E3E3E3;
+    border-radius: 0.6rem;
+    background-color: #FFFFFF;
+}
+
+.resumen > h2 {
+    margin: 0 0 0.7rem;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.08rem;
+}
+
+.evento {
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid #D8E1EA;
+}
+
+.imagen-evento {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.datos-evento {
+    min-width: 0;
+}
+
+.datos-evento h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.04rem;
+}
+
+.datos-evento p {
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+
+.datos-evento .dato-evento {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.icono-dato {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+.categoria {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    color: #42675D;
+    background-color: var(--verde-claro);
+    font-size: 0.7rem !important;
+}
+
+/* DETALLES DEL PEDIDO */
+
+.detalles-pedido {
+    display: grid;
+    gap: 0.8rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+}
+
+.detalles-pedido div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detalles-pedido dt {
+    text-align: left;
+}
+
+.detalles-pedido dd {
+    margin: 0;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* TOTAL PAGADO */
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0.5rem 0;
+    border-top: 1px solid #D8E1EA;
+}
+
+.total h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.total p {
+    margin: 0;
+    color: var(--verde-oscuro);
+    font-size: 1.4rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+/* ==========================================
+   9. BOTONES
+========================================== */
+
+.acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 18rem;
+}
+
+.boton-principal,
+.boton-secundario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.4rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.boton-principal {
+    color: #FFFFFF;
+    background-color: var(--naranja);
+}
+
+.boton-principal:hover {
+    background-color: #E67F0B;
+}
+
+.boton-secundario {
+    color: var(--verde-oscuro);
+    background-color: var(--verde-claro);
+    border-color: var(--verde);
+}
+
+.boton-secundario:hover {
+    background-color: #D3EAE3;
+}
+
+.icono-ticket {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   10. PIE DE PÁGINA
+========================================== */
+
+.pie-pagina {
+    padding: 1rem;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.pie-pagina p {
+    margin: 0;
+    color: #555555;
+    font-size: 0.8rem;
+}
+
+/* ==========================================
+   11. RESPONSIVE: DESKTOP
+========================================== */
+
+@media (min-width: 1024px) {
+    .encabezado {
+        grid-template-columns: minmax(12rem, 1fr) 1.8fr;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .confirmacion {
+        padding: 2rem 3rem;
+    }
+
+    .pasos {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ==========================================
+   12. RESPONSIVE: TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .encabezado {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    .navegacion {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+    }
+
+    .confirmacion {
+        padding: 1.5rem;
+    }
+
+    .resumen {
+        max-width: 33rem;
+    }
+
+    .total {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+/* ==========================================
+   13. RESPONSIVE: MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+    .encabezado {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .logo img {
+        width: 9rem;
+    }
+
+    .navegacion {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem 1rem;
+    }
+
+    .navegacion a {
+        font-size: 0.8rem;
+    }
+
+    .navegacion .boton-cuenta {
+        padding: 0.6rem 0.9rem;
+    }
+
+    .confirmacion {
+        min-height: auto;
+        padding: 1rem;
+        gap: 1.25rem;
+    }
+
+    .pasos {
+        gap: 0.35rem;
+    }
+
+    .paso {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        text-align: center;
+    }
+
+    .paso span {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .paso p {
+        margin: 0;
+        font-size: 0.65rem;
+        white-space: normal;
+    }
+
+    .mensaje-exito h1 {
+        font-size: 1.45rem;
+    }
+
+    .resumen {
+        padding: 1rem;
+    }
+
+    .resumen > h2 {
+        font-size: 1.1rem;
+    }
+
+    .evento {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    .imagen-evento {
+        width: min(100%, 14rem);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .datos-evento {
+        width: 100%;
+    }
+
+    .detalles-pedido {
+        font-size: 0.75rem;
+    }
+
+    .total {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .total h3 {
+        font-size: 1rem;
+    }
+
+    .total p {
+        font-size: 1.1rem;
+    }
+
+    .acciones {
+        max-width: 100%;
+    }
+}

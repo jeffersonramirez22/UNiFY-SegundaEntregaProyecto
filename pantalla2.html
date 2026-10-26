@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de compra | UNiFY</title>
+    <link rel="stylesheet" href="css/style-confirmacion.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="logo">
+            <img src="img/unify-logo.png" alt="Logotipo de UNiFY">
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="#evento">Eventos</a>
+            <a href="#evento">Categoría</a>
+            <a href="#resumen">Mis compras</a>
+            <a href="#cuenta" class="boton-cuenta">
+                <img src="img/icono-cuenta.png" alt="" class="icono-cuenta">
+                <span>Mi cuenta</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="confirmacion">
+
+        <nav class="pasos" aria-label="Progreso de compra">
+            <div class="paso completado">
+                <span>1</span>
+                <p>Selección</p>
+            </div>
+
+            <div class="paso completado">
+                <span>2</span>
+                <p>Carrito</p>
+            </div>
+
+            <div class="paso completado">
+                <span>3</span>
+                <p>Pago</p>
+            </div>
+
+            <div class="paso actual" aria-current="step">
+                <span>4</span>
+                <p>Confirmación</p>
+            </div>
+        </nav>
+
+        <section class="mensaje-exito">
+            <div class="icono-exito" aria-hidden="true">✓</div>
+            <h1>¡Compra confirmada!</h1>
+            <p>Tu compra se ha realizado con éxito.</p>
+        </section>
+
+        <section class="resumen" id="resumen">
+            <h2>Resumen de compra</h2>
+
+            <article class="evento" id="evento">
+                <img src="img/evento-cisnes.png" alt="Bailarines durante la presentación de El lago de los cisnes"
+                    class="imagen-evento">
+
+                <div class="datos-evento">
+                    <h3>El lago de los cisnes</h3>
+                    <p class="categoria">Cultura</p>
+                    <p class="dato-evento">
+                        <img src="img/icono-calendario.png" alt="" class="icono-dato">
+                        <span>Sáb, 15 de nov. de 2026</span>
+                    </p>
+
+                    <p class="dato-evento">
+                        <img src="img/icono-hora.png" alt="" class="icono-dato">
+                        <span>8:00 p. m.</span>
+                    </p>
+
+                    <p class="dato-evento">
+                        <img src="img/icono-ubicacion.png" alt="" class="icono-dato">
+                        <span>Teatro Nacional,<br>San Salvador</span>
+                    </p>
+                </div>
+            </article>
+
+            <dl class="detalles-pedido">
+                <div>
+                    <dt>Número de pedido</dt>
+                    <dd>EVE - 000123</dd>
+                </div>
+
+                <div>
+                    <dt>Tipo de entrada</dt>
+                    <dd>Zona VIP × 1</dd>
+                </div>
+
+                <div>
+                    <dt>Subtotal</dt>
+                    <dd>$85.00</dd>
+                </div>
+
+                <div>
+                    <dt>Cargo por servicio</dt>
+                    <dd>$3.50</dd>
+                </div>
+            </dl>
+
+            <div class="total">
+                <h3>Total pagado</h3>
+                <p>$88.50</p>
+            </div>
+
+
+        </section>
+
+        <section class="acciones" aria-label="Acciones de compra">
+            <a href="#ticket" class="boton-principal">
+                <img src="img/icono-ticket.png" alt="" class="icono-ticket">
+                <span>Ver mi ticket digital</span>
+            </a>
+
+            <a href="index.html" class="boton-secundario">
+                Volver al inicio
+            </a>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
