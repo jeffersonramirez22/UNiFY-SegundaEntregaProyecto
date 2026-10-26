@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finaliza tu compra de entradas en UNIFY.">
+    <title>UNIFY | Finaliza tu compra</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   
+<header class="encabezado">
+    <a class="logo" href="index.html" aria-label="UNIFY, página principal">
+        <img
+            src="img/logo y eslogan.jpeg"
+            alt="UNIFY, una conexión de experiencias"
+            class="logo-imagen"
+        >
+    </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="#">Inicio</a>
+            <a href="#">Eventos</a>
+            <a href="#">Categorías</a>
+            <a href="#">Mis compras</a>
+            <a class="cuenta" href="#">♙ Mi cuenta</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <a class="volver" href="#">← Volver</a>
+
+        <nav class="progreso" aria-label="Progreso de compra">
+            <div class="etapa completada">
+                <span class="numero">1</span>
+                <span class="nombre-etapa">Selección</span>
+            </div>
+
+            <span class="conector completado"></span>
+
+            <div class="etapa completada">
+                <span class="numero">2</span>
+                <span class="nombre-etapa">Carrito</span>
+            </div>
+
+            <span class="conector completado"></span>
+
+            <div class="etapa actual" aria-current="step">
+                <span class="numero">3</span>
+                <span class="nombre-etapa">Pago</span>
+            </div>
+
+            <span class="conector"></span>
+
+            <div class="etapa pendiente">
+                <span class="numero">4</span>
+                <span class="nombre-etapa">Confirmación</span>
+            </div>
+        </nav>
+
+        <section class="introduccion">
+            <h1>Finaliza tu compra</h1>
+            <p>Completa tus datos para continuar.</p>
+        </section>
+
+        <div class="contenido-pago">
+            <section class="formulario" aria-labelledby="titulo-comprador">
+                <h2 id="titulo-comprador">
+                    <span class="icono-seccion" aria-hidden="true">♙</span>
+                    Datos del comprador
+                </h2>
+
+                <form id="formulario-pago" action="#" method="post">
+                    <div class="campos">
+                        <div class="campo">
+                            <label for="nombre">Nombre completo</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Ingresa tu nombre"
+                                autocomplete="given-name"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="apellido">Apellido</label>
+                            <input
+                                type="text"
+                                id="apellido"
+                                name="apellido"
+                                placeholder="Ingresa tu apellido"
+                                autocomplete="family-name"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="correo">Correo electrónico</label>
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="correo@ejemplo.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="0000-0000"
+                                autocomplete="tel"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <hr class="separador">
+
+                    <h2 class="titulo-metodo">
+                        <span class="icono-metodo" aria-hidden="true">▤</span>
+                        Método de pago
+                    </h2>
+
+                    <fieldset class="metodos">
+                        <legend class="solo-lectores">
+                            Selecciona un método de pago
+                        </legend>
+
+                        <label class="opcion-pago seleccionada">
+                            <input
+                                type="radio"
+                                name="metodo"
+                                value="tarjeta"
+                                checked
+                            >
+
+                            <span class="tarjeta-icono" aria-hidden="true">▤</span>
+
+                            <span class="texto-metodo">
+                                <strong>Tarjeta de crédito o débito</strong>
+                                <small>Pago con tarjeta</small>
+                            </span>
+                        </label>
+
+                        <label class="opcion-pago">
+                            <input
+                                type="radio"
+                                name="metodo"
+                                value="transferencia"
+                            >
+
+                            <span class="transferencia-icono" aria-hidden="true">◎</span>
+
+                            <span class="texto-metodo">
+                                <strong>Transferencia bancaria</strong>
+                                <small>Pago mediante transferencia</small>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <p class="aviso-seguridad">
+                        <span aria-hidden="true">♙</span>
+                        Tus datos están protegidos. Esta maqueta no procesa
+                        pagos reales ni almacena información bancaria.
+                    </p>
+                </form>
+            </section>
+
+            <aside class="resumen" aria-labelledby="titulo-resumen">
+                <h2 id="titulo-resumen">Resumen de compra</h2>
+
+                <article class="evento">
+                    <img
+                        class="imagen-evento"
+                        src="img/evento.jpg"
+                        alt="Imagen del espectáculo El lago de los cisnes"
+                    >
+
+                    <h3>El lago de los cisnes</h3>
+                    <span class="categoria">Cultura</span>
+                </article>
+
+                <div class="informacion-evento">
+                    <p>
+                        <span>Fecha</span>
+                        <strong>Sáb. 14 de nov. de 2026</strong>
+                    </p>
+
+                    <p>
+                        <span>Hora</span>
+                        <strong>08:00 p. m.</strong>
+                    </p>
+
+                    <p>
+                        <span>Lugar</span>
+                        <strong>Teatro Nacional, San Salvador</strong>
+                    </p>
+                </div>
+
+                <div class="detalle-resumen">
+                    <p>
+                        <span>Entradas seleccionadas</span>
+                        <strong>1</strong>
+                    </p>
+
+                    <p>
+                        <span>Zona VIP</span>
+                        <strong>$85.00</strong>
+                    </p>
+
+                    <p>
+                        <span>Subtotal</span>
+                        <strong>$85.00</strong>
+                    </p>
+
+                    <p>
+                        <span>Cargo por servicio</span>
+                        <strong>$3.50</strong>
+                    </p>
+
+                    <p class="total">
+                        <span>Total</span>
+                        <strong>$88.50</strong>
+                    </p>
+                </div>
+
+                <button
+                    class="boton-pagar"
+                    type="submit"
+                    form="formulario-pago"
+                >
+                    <span aria-hidden="true">🛒</span>
+                    Confirmar y pagar
+                </button>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <p>Tus datos estan protegidos, utilizamos encriptación de extremo a extremo para garantiazar la seguridad de tu información.</p>
+    </footer>
+</body>
+</html>
