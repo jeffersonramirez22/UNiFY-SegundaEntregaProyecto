@@ -15,6 +15,7 @@ Pantallas:
 *index.html: pantalla de Pago.
 
 Estructura del proyecto.
+"
 UNIFY/
 ├── index.html
 ├── pantalla2.html
@@ -23,6 +24,7 @@ UNIFY/
 │   └── style.css
 ├── fonts/
 └── img/
+"
 
 Diseño adaptable:
 La interfaz se adapta a dispositivos móviles, tabletas y computadoras mediante media queries en CSS.
